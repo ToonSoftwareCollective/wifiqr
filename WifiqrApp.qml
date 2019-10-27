@@ -6,7 +6,7 @@ App {
     property url screenUrl: "WifiqrScreen.qml"
 
     // Location of the configuration file
-    property url configfile: "file:///HCBv2/qml/config/wifiqr.cfg"
+    property url configfile: "file:///mnt/data/tsc/wifiqr.userSettings.json"
 
     property WifiqrScreen wifiqrScreen
 

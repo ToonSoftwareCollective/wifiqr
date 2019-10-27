@@ -1,2 +1,5 @@
+1.1
+- move save file to /mnt/data/tsc location
+
 1.0
 - initial release.
