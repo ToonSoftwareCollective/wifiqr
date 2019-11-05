@@ -1,5 +1,6 @@
 1.1
-- move save file to /mnt/data/tsc location
+- settings file moved to /mnt/data/tsc folder
+- firmware 5 compatible only, support for lower firmwares has been dropped.
 
 1.0
 - initial release.
