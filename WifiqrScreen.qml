@@ -31,7 +31,7 @@ Screen {
 
     function openKeyboard(location) {
 	typeSelection.currentControlId = 1
-	if (location === 0) {
+	if (location == 0) {
 	    qkeyboard.open(qsTr("Enter the password"), "", savePassword);
 	} else {
 	    qkeyboard.open(qsTr("Enter the network name"), networkNameLabel.inputText, saveNetworkName);
@@ -110,7 +110,7 @@ Screen {
 	    Layout.fillWidth: true
 	    controlGroupId: 1
 	    controlGroup: typeSelection
-	    text: qsTr("Manual network sepcification")
+	    text: qsTr("Manual network specification")
 	}
 	Text {
 	    Layout.leftMargin: 36
