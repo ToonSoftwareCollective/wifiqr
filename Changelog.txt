@@ -1,2 +1,0 @@
-1.0.6
-- Images changed to existing in the resource file. Have some added to the resource file, which will be made later. JSON file is now filled correctly, so that Home Assistant works. // mAiden
