@@ -29,15 +29,6 @@ Screen {
 	show();
     }
 
-    function openKeyboard(location) {
-	typeSelection.currentControlId = 1
-	if (location == 0) {
-	    qkeyboard.open(qsTr("Enter the password"), "", savePassword);
-	} else {
-	    qkeyboard.open(qsTr("Enter the network name"), networkNameLabel.inputText, saveNetworkName);
-	}
-    }
-
     function saveNetworkName(text) {
 	if (text) {
 	    networkNameLabel.inputText = text;
@@ -51,6 +42,7 @@ Screen {
 	    passwordLabel.inputText = "*".repeat(text.length);
 	}
     }
+
 
     screenTitle: qsTr("WiFi network specification")
 
@@ -116,10 +108,24 @@ Screen {
 	    Layout.leftMargin: 36
 	    text: qsTr("Network") + ": "
 	}
-	EditTextLabel {
-	    id: networkNameLabel
-	    onClicked: openKeyboard(1)
-	}
+        EditTextLabel4421 {
+            id: networkNameLabel
+            width: 560
+            height: 36
+            leftTextAvailableWidth: 250
+            leftText: "Enter the network name"
+            anchors {
+                top: saveNetworkName.bottom
+                topMargin: 13
+            }
+
+            onClicked: {
+                passwordLabel.inputText = "";
+                qkeyboard.open("Enter the password", networkNameLabel.inputText, saveNetworkName)
+            }
+        }
+
+
 	IconButton {
 	    Layout.preferredWidth: 36
 	    iconSource: "qrc:/images/edit.svg"
@@ -129,10 +135,23 @@ Screen {
 	    Layout.leftMargin: 36
 	    text: qsTr("Password") + ": "
 	}
-	EditTextLabel {
-	    id: passwordLabel
-	    onClicked: openKeyboard(0)
-	}
+        EditTextLabel4421 {
+            id: passwordLabel
+            width: 560
+            height: 36
+            leftTextAvailableWidth: 250
+            leftText: "Enter the password"
+            anchors {
+                top: savePassword.bottom
+                topMargin: 13
+            }
+
+            onClicked: {
+                passwordLabel.inputText = "";
+                qkeyboard.open("Enter the password", passwordLabel.inputText, savePassword)
+            }
+        }
+
 	IconButton {
 	    Layout.preferredWidth: 36
 	    iconSource: "qrc:/images/edit.svg"

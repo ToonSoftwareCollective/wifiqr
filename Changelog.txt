@@ -1,3 +1,6 @@
+1.3
+- keyboard went over the input field, when pressing the input field. This is solved in this version. // mAiden
+
 1.2
 - corrected typo's in the code
 
