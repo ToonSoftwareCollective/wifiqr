@@ -1,9 +1,0 @@
-1.2
-- corrected typo's in the code
-
-1.1
-- settings file moved to /mnt/data/tsc folder
-- firmware 5 compatible only, support for lower firmwares has been dropped.
-
-1.0
-- initial release.
